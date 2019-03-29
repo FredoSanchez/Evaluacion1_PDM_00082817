@@ -12,4 +12,5 @@ public class AppConstants {
     public static String CANT9 = "text9";
     public static String USER_KEY = "text10";
     public static String EMAIL_KEY = "text11";
+    public static String SUMA = "text12";
 }

@@ -21,6 +21,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/ll_prod1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -41,6 +42,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_prod2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -61,6 +63,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_prod3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -88,6 +91,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/ll_prod4"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -108,10 +112,10 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_prod5"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-
             android:orientation="vertical">
 
             <TextView
@@ -129,6 +133,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_prod6"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -156,6 +161,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/ll_prod7"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -176,6 +182,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_prod8"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -197,6 +204,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_prod9"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
