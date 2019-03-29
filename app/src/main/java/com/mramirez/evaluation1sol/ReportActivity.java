@@ -53,20 +53,53 @@ public class ReportActivity extends AppCompatActivity {
             mCant9.setText(mIntent.getStringExtra(AppConstants.CANT9));
         }
 
-        /*
+
         mShareBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String json = makeJSON(mUserName.getText().toString(),mEmail.getText().toString(),mTotal.getText().toString(),
+                        mCant1.getText().toString(), mCant2.getText().toString(), mCant3.getText().toString(),
+                        mCant4.getText().toString(),mCant5.getText().toString(),mCant6.getText().toString(),
+                        mCant7.getText().toString(),mCant8.getText().toString(),mCant9.getText().toString());
+
+                Intent mIntent = new Intent();
+                mIntent.setType("text/plain");
+                mIntent.setAction(Intent.ACTION_SEND);
+                mIntent.putExtra(Intent.EXTRA_TEXT,json);
+
+                startActivity(mIntent);
 
             }
         });
-        */
 
 
     }
 
 
+    private String makeJSON(String name, String email, String suma,
+                            String cant1, String cant2, String cant3, String cant4, String cant5,
+                            String cant6, String cant7, String cant8, String cant9){
 
+        String JSON = "{ ";
+        JSON = JSON + "\"Name\": \"" + name
+                + "\" , \"Email\" : \"" + email
+                + "\" , \"Products\" : \" { \""
+                + "\"Product1\" : \"" + cant1
+                + "\" , \"Product2\" : \"" + cant2
+                + "\" , \"Product3\" : \"" + cant3
+                + "\" , \"Product4\" : \"" + cant4
+                + "\" , \"Product5\" : \"" + cant5
+                + "\" , \"Product6\" : \"" + cant6
+                + "\" , \"Product7\" : \"" + cant7
+                + "\" , \"Product8\" : \"" + cant8
+                + "\" , \"Product9\" : \"" + cant9
+                + "\" }}";
+
+
+        return JSON;
+
+
+    }
 
 
 }
