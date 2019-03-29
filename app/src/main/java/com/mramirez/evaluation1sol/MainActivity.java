@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         mEmail = findViewById(R.id.et_email);
         mBotonEnviar = findViewById(R.id.btn_send);
 
+
+        //Cantidades de productos
         cant1 = Integer.parseInt(mContador1.getText().toString());
         cant2 = Integer.parseInt(mContador2.getText().toString());
         cant3 = Integer.parseInt(mContador3.getText().toString());
@@ -45,16 +47,29 @@ public class MainActivity extends AppCompatActivity {
         cant8 = Integer.parseInt(mContador8.getText().toString());
         cant9 = Integer.parseInt(mContador9.getText().toString());
 
+        /*
+        mContador1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cant1 = cant1++;
+                mContador1.setText(cant1.toString());
+            }
+        });
+*/
         int suma = cant1 + cant2 + cant3 + cant4 + cant5 + cant6 + cant7 + cant8 + cant9;
 
 
         mBotonEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String userName = mUserName.getText().toString();
+                String userName = mUserName.getText().toString(),
+                        email = mEmail.getText().toString();
+
+
 
                 Intent mIntent = new Intent(MainActivity.this, ReportActivity.class);
                 mIntent.putExtra(AppConstants.USER_KEY,userName);
+                mIntent.putExtra(AppConstants.EMAIL_KEY, email);
                 startActivity(mIntent);
             }
         });
